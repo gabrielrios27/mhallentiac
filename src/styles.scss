@@ -1,4 +1,16 @@
-/* You can add global styles to this file, and also import other style files */
-
 /* Importing Bootstrap SCSS file. */
-@import '~bootstrap/scss/bootstrap';
+@import "~bootstrap/scss/bootstrap";
+
+@font-face {
+  font-family: lato;
+  src: url(assets/fonts/lato/Lato-Light.ttf) format("opentype");
+}
+@font-face {
+  font-family: lato-bold;
+  src: url(assets/fonts/lato/Lato-Bold.ttf) format("opentype");
+}
+@font-face {
+  font-family: lato-italic;
+  src: url(assets/fonts/lato/Lato-LightItalic.ttf) format("opentype");
+}
+
