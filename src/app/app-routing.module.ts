@@ -1,7 +1,7 @@
 import { RouterModule, Routes } from '@angular/router';
 
 import { NgModule } from '@angular/core';
-import { UserLayoutComponent } from './modules/user/layout';
+import { UserLayoutComponent } from './core/layouts/containers';
 
 const routes: Routes = [
   {

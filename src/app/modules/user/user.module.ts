@@ -1,7 +1,5 @@
 /*Containers*/
 import * as userContainers from './containers/index';
-/*Layout*/
-import * as userLayout from './layout/index';
 /* Services */
 import * as userServices from './services';
 
@@ -11,9 +9,9 @@ import { RouterModule } from '@angular/router';
 import { UserRoutingModule } from './user-routing.module';
 
 @NgModule({
-  declarations: [...userContainers.containers],
+  declarations: [...userContainers.containers, RouterModule],
   imports: [CommonModule, UserRoutingModule, RouterModule],
   providers: [...userServices.services],
-  exports: [...userLayout.layout],
+  exports: [],
 })
 export class UserModule {}
