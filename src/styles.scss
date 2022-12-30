@@ -3,7 +3,7 @@
 
 @font-face {
   font-family: lato;
-  src: url(assets/fonts/lato/Lato-Light.ttf) format("opentype");
+  src: url(assets/fonts/lato/Lato-Regular.ttf) format("opentype");
 }
 @font-face {
   font-family: lato-bold;
@@ -14,3 +14,24 @@
   src: url(assets/fonts/lato/Lato-LightItalic.ttf) format("opentype");
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "lato", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
