@@ -13,65 +13,108 @@
   left: 0;
 }
 .logo {
+  max-height: 3.6em;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   text-decoration: none;
   &:hover .logo__container::after {
     // animation: rotate 4s linear infinite;
     background: linear-gradient(
-      to left,
-      $tertiary-300 20%,
+      to top,
+      $tertiary-300,
+      $tertiary-200,
       $tertiary-100,
-      $tertiary-50,
+      $tertiary-200,
+      $tertiary-300,
+      $tertiary-300,
+      $tertiary-200,
       $tertiary-100,
-      $tertiary-300 80%
+      $tertiary-200,
+      $tertiary-300
     );
   }
   .logo__container {
+    height: 50px;
     position: relative;
     overflow: hidden;
+    display: flex;
+    align-items: flex-end;
     &::after {
       content: "";
-      width: 98%;
-      height: 98%;
+      width: 95%;
+      height: 200%;
       position: absolute;
       top: 0;
       left: 0;
       background: linear-gradient(
-        to left,
-        $tertiary-500 20%,
+        to top,
+        $tertiary-400,
         $tertiary-300,
         $tertiary-200,
         $tertiary-300,
-        $tertiary-500 80%
+        $tertiary-400,
+        $tertiary-400,
+        $tertiary-300,
+        $tertiary-200,
+        $tertiary-300,
+        $tertiary-400
       );
       z-index: 5;
-      border-radius: 50px;
-      animation: rotate 10s linear infinite;
+      // border-radius: 50px;
+      animation: tranlateBackground 10s linear infinite;
       transition: all 0.6s linear;
     }
     .logo__img {
+      height: 50px;
       position: relative;
       z-index: 15;
     }
   }
   .logo__name {
-    padding-top: 7px;
-    margin-left: 10px;
-    color: white;
-    width: 14ch;
+    // padding-top: 7px;
+    // margin-left: 10px;
     text-align: center;
-    font-size: 14px;
-    font-family: "lato-bold";
+    .logo__firstName,
+    .logo__secondName {
+      font-family: "season";
+      color: white;
+      letter-spacing: 3px;
+      line-height: 1;
+      padding-bottom: 2px;
+      padding-left: 1px;
+      margin-bottom: 7px;
+    }
+    .logo__firstName {
+      position: relative;
+      font-size: 22px;
+      padding-top: 9px;
+      // &::after {
+      //   content: "";
+      //   width: 50%;
+      //   height: 1px;
+      //   background-color: $tertiary-400;
+      //   position: absolute;
+      //   top: 0px;
+      //   right: 3px;
+      // }
+      &::after {
+        content: "";
+        width: 97%;
+        height: 1px;
+        background-color: $tertiary-400;
+        position: absolute;
+        bottom: 0px;
+        left: 3px;
+      }
+    }
     .logo__secondName {
       font-size: 10px;
-      font-family: inherit;
     }
   }
 }
-@keyframes rotate {
+@keyframes tranlateBackground {
   100% {
-    transform: rotate(360deg);
+    transform: translateY(-55px);
   }
 }
 .nav {
