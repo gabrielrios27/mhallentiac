@@ -1,7 +1,7 @@
 /*Containers*/
 import * as userContainers from './containers/index';
 /* Services */
-import * as userServices from './services';
+import * as userServices from './services/index';
 
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
