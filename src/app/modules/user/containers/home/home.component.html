@@ -1,64 +1,18 @@
-<p>home works!</p>
-<p>home works!</p>
-<p>home works!</p>
-<p>home works!</p>
-<p>home works!</p>
-<p>home works!</p>
-<p>home works!</p>
-<p>
-  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse modi dolores
-  reiciendis aliquam deleniti dolore animi aliquid ipsam voluptatum et veniam
-  pariatur mollitia tempora ea odio, nisi incidunt voluptatibus! Amet. Itaque,
-  possimus voluptate ducimus maiores fuga laborum libero nihil dolorem soluta
-  nostrum quos quo accusantium qui corporis ratione quia mollitia laudantium?
-  Totam nobis animi quo debitis reiciendis sunt culpa fugiat! Soluta corrupti
-  fuga aspernatur nemo perferendis quia, quod provident unde accusantium veniam
-  quibusdam facere sequi et repudiandae hic natus asperiores modi expedita dolor
-  ad suscipit. Ea, voluptates. Inventore, similique consectetur! Sint ea,
-  distinctio excepturi reprehenderit et error quae eaque ut tempore nostrum in
-  ullam illum obcaecati dicta quos sit? Libero rerum enim expedita voluptas
-  debitis eligendi sint optio saepe perspiciatis. Nemo unde a dolore alias vel
-  necessitatibus culpa, laborum hic esse in, corporis quaerat enim fuga beatae
-  labore. Nulla fugiat nam autem? Placeat debitis aperiam, ducimus ipsum
-  corporis reiciendis. Quo.
-</p>
-<p>home works!</p>
-<p>home works!</p>
-<p>home works!</p>
-<p>
-  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse modi dolores
-  reiciendis aliquam deleniti dolore animi aliquid ipsam voluptatum et veniam
-  pariatur mollitia tempora ea odio, nisi incidunt voluptatibus! Amet. Itaque,
-  possimus voluptate ducimus maiores fuga laborum libero nihil dolorem soluta
-  nostrum quos quo accusantium qui corporis ratione quia mollitia laudantium?
-  Totam nobis animi quo debitis reiciendis sunt culpa fugiat! Soluta corrupti
-  fuga aspernatur nemo perferendis quia, quod provident unde accusantium veniam
-  quibusdam facere sequi et repudiandae hic natus asperiores modi expedita dolor
-  ad suscipit. Ea, voluptates. Inventore, similique consectetur! Sint ea,
-  distinctio excepturi reprehenderit et error quae eaque ut tempore nostrum in
-  ullam illum obcaecati dicta quos sit? Libero rerum enim expedita voluptas
-  debitis eligendi sint optio saepe perspiciatis. Nemo unde a dolore alias vel
-  necessitatibus culpa, laborum hic esse in, corporis quaerat enim fuga beatae
-  labore. Nulla fugiat nam autem? Placeat debitis aperiam, ducimus ipsum
-  corporis reiciendis. Quo.
-</p>
-<p>home works!</p>
-<p>home works!</p>
-<p>home works!</p>
-<p>
-  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse modi dolores
-  reiciendis aliquam deleniti dolore animi aliquid ipsam voluptatum et veniam
-  pariatur mollitia tempora ea odio, nisi incidunt voluptatibus! Amet. Itaque,
-  possimus voluptate ducimus maiores fuga laborum libero nihil dolorem soluta
-  nostrum quos quo accusantium qui corporis ratione quia mollitia laudantium?
-  Totam nobis animi quo debitis reiciendis sunt culpa fugiat! Soluta corrupti
-  fuga aspernatur nemo perferendis quia, quod provident unde accusantium veniam
-  quibusdam facere sequi et repudiandae hic natus asperiores modi expedita dolor
-  ad suscipit. Ea, voluptates. Inventore, similique consectetur! Sint ea,
-  distinctio excepturi reprehenderit et error quae eaque ut tempore nostrum in
-  ullam illum obcaecati dicta quos sit? Libero rerum enim expedita voluptas
-  debitis eligendi sint optio saepe perspiciatis. Nemo unde a dolore alias vel
-  necessitatibus culpa, laborum hic esse in, corporis quaerat enim fuga beatae
-  labore. Nulla fugiat nam autem? Placeat debitis aperiam, ducimus ipsum
-  corporis reiciendis. Quo.
-</p>
+<ngb-carousel
+  *ngIf="covers"
+  [showNavigationArrows]="true"
+  [showNavigationIndicators]="false"
+  [interval]="7000"
+  [pauseOnFocus]="false"
+  [pauseOnHover]="false"
+>
+  <ng-template ngbSlide *ngFor="let cover of covers">
+    <div class="picsum-img-wrapper">
+      <img [src]="cover.imagen" alt="Random slide" class="home__imgSlide" />
+    </div>
+    <div class="carousel-caption">
+      <h3>No mouse navigation</h3>
+      <p>This carousel hides navigation arrows and indicators.</p>
+    </div>
+  </ng-template>
+</ngb-carousel>

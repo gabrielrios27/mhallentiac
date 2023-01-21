@@ -1,0 +1,8 @@
+@import "./../../../../../constants/colors.scss";
+
+.home__imgSlide {
+  width: 100%;
+  height: calc(100vh - 57px);
+  object-fit: cover;
+  object-position: center;
+}

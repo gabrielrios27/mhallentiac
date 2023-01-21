@@ -2,6 +2,8 @@
 // import { getStorage, provideStorage } from '@angular/fire/storage';
 // import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 
+import { CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA } from '@angular/core';
+
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireStorageModule } from '@angular/fire/compat/storage';
@@ -12,6 +14,7 @@ import { LayoutsModule } from './core/layouts/layouts.module';
 import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule } from '@angular/router';
+import { UserModule } from './modules/user/user.module';
 import { environment } from '../environments/environment';
 
 @NgModule({
@@ -28,8 +31,10 @@ import { environment } from '../environments/environment';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     AngularFireStorageModule,
+    UserModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class AppModule {}
